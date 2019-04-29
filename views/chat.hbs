@@ -1,0 +1,25 @@
+{{>headers}}
+
+<div id="page-content-wrapper">
+    <div class="container-fluid">
+        {{>banner}}
+            <h1>Sala de Chat</h1>
+            <form id="formulario">
+                <input type="text" id="texto" >
+                <button> enviar </button>
+            </form>
+            <div id="chat"></div>
+            <form id="formularioPrivado">
+                <input type="text" id="destinatario" placeholder="destinatario">
+                <input type="text" id="textoPrivado" >
+                <button> enviar Privado </button>
+            </form>
+            <div id="chatPrivado"></div>
+
+
+            <script src="socket.io/socket.io.js"></script>
+            <script src="js/socket.js"></script>
+        {{>copyright}}
+    </div>
+</div>
+{{>footer}}

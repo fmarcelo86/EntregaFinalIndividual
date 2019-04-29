@@ -1,0 +1,57 @@
+{{>headers}}
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            {{>banner}}
+            <h4 class="sub-header">Bienvenido a la pagina de educacion continua</h4>
+            <div class="container">
+            {{#if msgError}}
+                <h5>{{msgError}}</h5>
+            {{else}}
+                <p>Ingrese sus datos en el siguiente formulario</p>
+                <form action="registrar" method="post">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col">
+                                <label >Identidad</label>
+                                <input type="text"  class="form-control" name="identidad" placeholder="Identidad" required>
+                            </div>
+                            <div class="col">
+                                <label >Nombre</label>
+                                <input type="text"  class="form-control" name="nombre" placeholder="Nombre" required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <label >Correo</label>
+                                <input type="email"  class="form-control" name="correo" placeholder="Correo" required>
+                            </div>
+                            <div class="col">
+                                <label >Telefono</label>
+                                <input type="text"  class="form-control" name="telefono" placeholder="Telefono" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label >Contraseña</label>
+                                <input type="text"  class="form-control" name="clave" placeholder="Contraseña" required>
+                            </div>
+                            <div class="col">
+                                <label >Perfil</label>
+                                <select class="form-control" name="rol">
+                                    <option value="Aspirante">Aspirante</option>
+                                    <option value="Coordinador">Coordinador</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <button class="btn btn-dark">Registrar</button>
+                </form>
+            </div>
+            {{/if}}
+            {{>copyright}}
+        </div>
+    </div>
+
+{{>footer}}
